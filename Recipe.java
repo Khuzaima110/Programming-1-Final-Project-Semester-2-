@@ -10,5 +10,16 @@ public class Recipe
 {
     private String title;
     private ArrayList<Ingredient> ingredients;
+    private RecipeTag tag;
+    private double rating;
     
+    public void scale(int factor)
+    {
+        
+    }
+    
+    public String toString()
+    {
+        return"";
+    }
 }
