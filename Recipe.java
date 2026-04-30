@@ -56,4 +56,36 @@ public class Recipe
     public RecipeTag getTag() {
         return this.tag;
     }
+    
+    public double getRating()
+    {
+        return rating;
+    }
+    
+    public void setRating(double rating)
+    {
+        this.rating=rating;
+    }
+    
+    public String getTitle()
+    {
+        return title;
+    }
+    
+    public void setTitle(String title)
+    {
+        this.title=title;
+    }
+    
+    public void rate(int newRating)
+    {
+        //makes sure rating is from 1 to 5
+        if(newRating>=1 && newRating<= 5)
+        {
+            this.rating = newRating;
+            System.out.println("Successfully rated "+ newRating+" stars.");
+        } else{
+            System.out.println("Invalid rating. Please enter a value from 1 to 5");
+        }
+    }
 }
