@@ -10,4 +10,27 @@ public class Ingredient
     private String name;
     private double quantity;
     private String unit;
+    
+    // This is the Constructor
+    public Ingredient(String name, double quantity, String unit) {
+        this.name = name;
+        this.quantity = quantity;
+        this.unit = unit;
+    }
+    
+    public String toString()
+    {
+        return quantity + " " + unit + " of " + name;
+        
+    }
+    
+    public void setQuantity(double quantity)
+    {
+        this.quantity= quantity;
+    }
+    
+    public double getQuantity()
+    {
+        return quantity;
+    }
 }

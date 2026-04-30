@@ -7,5 +7,8 @@
  */
 public class FoodRecipe extends Recipe
 {
-   
+   public FoodRecipe(String title, int servings, RecipeTag tag)
+    {
+        super(title, servings, tag);
+    }
 }

@@ -10,14 +10,31 @@ public class RecipeBook
 {
     private ArrayList<Recipe> recipes;
     
-    public void addRecipe(Recipe r)
+    public RecipeBook()
     {
+        this.recipes= new ArrayList<>(); 
+    }
+    
+    public void addRecipe(Recipe recipe)
+    {
+        this.recipes.add(recipe);
         
     }
     
     public void searchByTag(RecipeTag tag)
     {
-        
+        System.out.println("Searching for: " + tag);
+        boolean found = false;
+        for(Recipe r:recipes){
+            if(r.getTag()== tag){
+                System.out.println(r.toString());
+                found = true;
+            }
+        }
+        if(!found)
+        {
+            System.out.println("No recipes found with that tag.");
+        }
     }
     
     public void listAll()
