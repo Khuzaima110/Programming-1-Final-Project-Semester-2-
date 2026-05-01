@@ -20,6 +20,18 @@ public class RecipeBook
         this.recipes.add(recipe);
 
     }
+    
+    public Recipe findByTitle(String title)
+    {
+        for(Recipe r: recipes){
+            //use equalsIgnoreCase so Pasta matches pasta
+            if(r.getTitle().equalsIgnoreCase(title)){
+                return r; //found it, so send the object back
+            }
+        }
+        return null; //Looked but didn't find it
+    }
+    
 
     public void searchByTag(RecipeTag tag)
     {
@@ -39,7 +51,14 @@ public class RecipeBook
 
     public void listAll()
     {
-
+        if(recipes.isEmpty()){
+            System.out.println("The recipe book is empty");
+        } else{
+            for(Recipe r : recipes) {
+                System.out.println(r.toString());
+                System.out.println("--------------------");
+            }
+        }
     }
 
     public void printTopRated()
