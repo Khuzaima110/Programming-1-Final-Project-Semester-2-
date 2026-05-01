@@ -30,6 +30,8 @@ public class Recipe
         this.ingredients.add(ingredient);
     }
 
+    
+    
     public void scale(int newServings)
     {
         // 1. Calculate the factor (use double to keep decimals)
@@ -77,6 +79,11 @@ public class Recipe
     public void setTitle(String title)
     {
         this.title=title;
+    }
+    
+    public int getServings()
+    {
+        return servings;
     }
     
     public void rate(int newRating)

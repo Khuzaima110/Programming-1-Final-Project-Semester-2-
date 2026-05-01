@@ -20,7 +20,7 @@ public class RecipeBook
         this.recipes.add(recipe);
 
     }
-    
+
     public Recipe findByTitle(String title)
     {
         for(Recipe r: recipes){
@@ -31,7 +31,6 @@ public class RecipeBook
         }
         return null; //Looked but didn't find it
     }
-    
 
     public void searchByTag(RecipeTag tag)
     {
@@ -64,7 +63,7 @@ public class RecipeBook
     public void printTopRated()
     {
         if (recipes.isEmpty()) {
-            System.out.println("No recipes to rate.");
+            System.out.println("The book is empty");
             return;
         }
 
@@ -77,5 +76,16 @@ public class RecipeBook
         }
 
         System.out.println("The top-rated recipe is: " + highest.getTitle());
+    }
+
+    public void printBookDetails() {
+        System.out.println("--- Recipe Book Statistics ---");
+        System.out.println("Total Number of Recipes: " + recipes.size());
+
+        int totalServings = 0;
+        for (Recipe r : recipes) {
+            totalServings += r.getServings();
+        }
+        System.out.println("Total servings available in book: " + totalServings);
     }
 }
