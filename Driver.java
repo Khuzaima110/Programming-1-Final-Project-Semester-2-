@@ -100,7 +100,7 @@ public class Driver
             }else if(choice == 7){
                 System.out.println("--- Create a New Recipe ---");
 
-                //getting the info
+                //1. getting the info
                 System.out.print("Enter Title: ");
                 String title = input.nextLine();
 
@@ -113,7 +113,7 @@ public class Driver
                 input.nextLine();
                 RecipeTag tag = (tagChoice == 1) ? RecipeTag.DAIRY_FREE : (tagChoice == 2) ? RecipeTag.VEGAN : RecipeTag.GLUTEN_FREE;
                 
-                //now we creat user's recipe
+                //2. now we creat user's recipe
                 
             }
 
