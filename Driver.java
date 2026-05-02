@@ -37,6 +37,7 @@ public class Driver
             System.out.println("4. Scale recipe");
             System.out.println("5. Find highest rated");
             System.out.println("6. Print book details");
+            System.out.println("7. Add your own recipe");
             System.out.println("0. Exit");
             System.out.print("Enter choice: ");
             choice = input.nextInt();
@@ -114,7 +115,27 @@ public class Driver
                 RecipeTag tag = (tagChoice == 1) ? RecipeTag.DAIRY_FREE : (tagChoice == 2) ? RecipeTag.VEGAN : RecipeTag.GLUTEN_FREE;
                 
                 //2. now we creat user's recipe
-                
+                Recipe userRecipe = new Recipe(title, servings, tag);
+                //3 adding ingredients
+                System.out.print("How many ingredients do you want to add? ");
+                int numIngredients = input.nextInt();
+                input.nextLine();
+                for (int i = 0; i<numIngredients; i++)
+                {
+                  System.out.println("Ingredient #" + (i+1));
+                  System.out.println(" Name: ");
+                  String ingName = input.nextLine();
+                  System.out.print(" Quantity: ");
+                  double q = input.nextDouble();
+                  input.nextLine();
+                  System.out.print("  Unit (e.g., g, cups): ");
+                  String unit = input.nextLine();
+                  userRecipe.addIngredient( new Ingredient(ingName, q, unit));
+                  
+                }
+                //4. save it to the book
+                myBook.addRecipe(userRecipe);
+                System.out.println("Success. " + title + " has been added to your book.");
             }
 
         }
