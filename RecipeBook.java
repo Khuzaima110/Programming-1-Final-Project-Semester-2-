@@ -8,18 +8,24 @@ import java.util.ArrayList;
 public class RecipeBook
 {
     private ArrayList<Recipe> recipes;
-    //creating the ArrayList
+    /**creating the ArrayList
+     * 
+     */
     public RecipeBook()
     {
         this.recipes= new ArrayList<>(); 
     }
-    //adding recipes (Not done directly, done via the driver class)
+    /**adding recipes (Not done directly, done via the driver class)
+     * 
+     */
     public void addRecipe(Recipe recipe)
     {
         this.recipes.add(recipe);
 
     }
-    //finds the recipees by name
+    /**finds the recipees by name
+     * 
+     */
     public Recipe findByTitle(String title)
     {
         for(Recipe r: recipes){
@@ -30,7 +36,9 @@ public class RecipeBook
         }
         return null; //Looked but didn't find it
     }
-    //searches recipies by tags, not name
+    /**searches recipies by tags, not name
+     * 
+     */
     public void searchByTag(RecipeTag tag)
     {
         System.out.println("Searching for: " + tag);
@@ -46,7 +54,9 @@ public class RecipeBook
             System.out.println("No recipes found with that tag.");
         }
     }
-    //lists all recipes currently in the recipe book
+    /**lists all recipes currently in the recipe book
+     * 
+     */
     public void listAll()
     {
         if(recipes.isEmpty()){
@@ -58,7 +68,9 @@ public class RecipeBook
             }
         }
     }
-    //prints top rated recipe
+    /**prints top rated recipe
+     * 
+     */
     public void printTopRated()
     {
         if (recipes.isEmpty()) {
@@ -76,7 +88,9 @@ public class RecipeBook
 
         System.out.println("The top-rated recipe is: " + highest.getTitle());
     }
-    //prints the details about the recipe book
+    /**prints the details about the recipe book
+     * 
+     */
     public void printBookDetails() {
         System.out.println("--- Recipe Book Statistics ---");
         System.out.println("Total Number of Recipes: " + recipes.size());

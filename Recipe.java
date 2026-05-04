@@ -82,7 +82,9 @@ public class Recipe
     {
         return servings;
     }
-    
+    /**
+     * For rating (Again, the user doesn't directly access this class)
+     */
     public void rate(int newRating)
     {
         //makes sure rating is from 1 to 5

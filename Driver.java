@@ -9,7 +9,7 @@ public class Driver
     public static void main(String[] args) {
         RecipeBook myBook = new RecipeBook();
 
-        // Pre-fill with one recipe so choice 1 actually shows something![cite: 1]
+        // Pre-fill with one recipe so choice 1 actually shows something[cite: 1]
         Recipe r1 = new Recipe("Pasta", 2, RecipeTag.DAIRY_FREE);
         r1.addIngredient(new Ingredient("Noodles", 200, "g"));
         myBook.addRecipe(r1);
@@ -71,7 +71,7 @@ public class Driver
                     System.out.print("Enter rating (1-5): ");
                     int rate = input.nextInt();
                     input.nextLine();
-                    found.setRating(rate); // Calls your rating validation logic!
+                    found.setRating(rate); // calls the rating validation logic
                 } else {
                     System.out.println("Recipe not found.");
                 }
@@ -136,7 +136,6 @@ public class Driver
                 myBook.addRecipe(userRecipe);
                 System.out.println("Success. " + title + " has been added to your book.");
             }
-
         }
         System.out.println("Goodbye");
     }
