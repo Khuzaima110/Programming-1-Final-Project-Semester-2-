@@ -2,7 +2,8 @@ import java.util.ArrayList;
 
 
 /**
- * These are the recipes 
+ * These are methods needed for the actual recipe, also for rating, naming and adding
+ * recipes
  */
 public class Recipe
 {
@@ -12,7 +13,9 @@ public class Recipe
     private RecipeTag tag;
     private double rating;
     
-    //
+    /**
+     * The constructor, making the ArrayList and also other things
+     */
     public Recipe(String title, int servings, RecipeTag tag)
     {
         this.title = title;
