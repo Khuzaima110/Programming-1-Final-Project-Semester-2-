@@ -2,10 +2,7 @@ import java.util.ArrayList;
 
 
 /**
- * Write a description of class Recipe here.
- *
- * @author (your name)
- * @version (a version number or a date)
+ * These are the recipes 
  */
 public class Recipe
 {
@@ -15,7 +12,7 @@ public class Recipe
     private RecipeTag tag;
     private double rating;
     
-
+    //
     public Recipe(String title, int servings, RecipeTag tag)
     {
         this.title = title;
