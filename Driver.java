@@ -1,9 +1,8 @@
 import java.util.Scanner;
 /**
- * Write a description of class Driver here.
+ * This basically calls the other methods in the other classes, and also puts
+ * some recipe in the recipe book
  *
- * @author (your name)
- * @version (a version number or a date)
  */
 public class Driver
 {

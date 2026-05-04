@@ -14,7 +14,7 @@ public class Recipe
     private ArrayList<Ingredient> ingredients;
     private RecipeTag tag;
     private double rating;
-    ArrayList<String> sad = new ArrayList<>();
+    
 
     public Recipe(String title, int servings, RecipeTag tag)
     {
