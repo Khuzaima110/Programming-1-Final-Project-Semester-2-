@@ -76,8 +76,6 @@ public class Driver
                     System.out.println("Recipe not found.");
                 }
 
-            } else if(choice==0){
-
             } else if(choice==4){
                 System.out.print("Enter the title of the recipe to scale: ");
                 String title = input.nextLine();
